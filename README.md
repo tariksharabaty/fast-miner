@@ -122,6 +122,6 @@ git clone https://github.com/tariksharabaty/o-lib.git
 
 ---
 
-<p align="center"><a href="https://oidioom.com"><picture><source media="(prefers-color-scheme: dark)" srcset=".github/assets/oidioom-dark.svg"><img src=".github/assets/oidioom-light.svg" width="40" alt="Oidioom"></picture></a></p>
+<p align="center"><a href="https://oidioom.com"><img src=".github/assets/oidioom-circle.svg" width="40" alt="Oidioom"></a></p>
 <p align="center"><b>by Oidioom — Tarek Sharabaty</b><br>
 <a href="https://oidioom.com">oidioom.com</a> · <a href="https://github.com/tariksharabaty">GitHub</a> · <a href="https://modrinth.com/organization/oidioomstudio">Modrinth</a> · <a href="https://gear.oidioom.com">Gear</a> · <a href="https://www.instagram.com/oidioom">Instagram</a></p>
