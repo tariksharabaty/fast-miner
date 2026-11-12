@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "fastminer",
+  "version": "${version}",
+  "name": "Fast Miner",
+  "description": "Break multiple blocks faster, faster, faster!",
+  "authors": [
+    "Tarek Sharabaty",
+    "Oidioom"
+  ],
+  "contact": {},
+  "custom": {
+    "modmenu": {
+      "links": {
+        "modmenu.instagram.lordotarik": "https://www.instagram.com/tariksby",
+        "modmenu.instagram.oidioom": "https://www.instagram.com/oidioom"
+      }
+    }
+  },
+  "license": "MIT",
+  "icon": "assets/fastminer/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.oidioomstudio.fastminer.FastMinerMod"
+    ],
+    "client": [
+      "com.oidioomstudio.fastminer.client.FastMinerClientMod"
+    ],
+    "modmenu": [
+      "com.oidioomstudio.fastminer.client.ModMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "fastminer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric-api": ">=0.163.0+26.3",
+    "minecraft": ">=26.3",
+    "java": ">=25",
+    "olib": ">=0.0.1"
+  }
+}

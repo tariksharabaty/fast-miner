@@ -1,0 +1,59 @@
+plugins {
+    id 'java'
+    id 'net.fabricmc.fabric-loom' version '1.18.2'
+    id 'maven-publish'
+}
+
+version = "${project.mod_version}-mc${project.minecraft_version}"
+group = project.maven_group
+
+base {
+    archivesName = project.archives_base_name
+}
+
+repositories {
+    mavenCentral()
+    maven {
+        name = 'TerraformersMC'
+        url = 'https://maven.terraformersmc.com/releases/'
+    }
+    maven {
+        name = 'Fabric'
+        url = 'https://maven.fabricmc.net/'
+    }
+    mavenLocal()
+}
+
+dependencies {
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+
+    implementation "net.fabricmc:fabric-loader:${project.loader_version}"
+    implementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
+
+    implementation "com.oidioomstudio:o-lib:${project.olib_version}"
+
+    compileOnly "com.terraformersmc:modmenu:21.0.0"
+}
+
+processResources {
+    inputs.property "version", project.version
+    filteringCharset = 'UTF-8'
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+
+    from("LICENSE")
+}
+
+tasks.withType(JavaCompile).configureEach {
+    it.options.encoding = "UTF-8"
+    it.options.release = 25
+    it.options.compilerArgs << "-Xlint:deprecation"
+}
+
+java {
+    withSourcesJar()
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
+}
